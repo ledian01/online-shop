@@ -1,0 +1,38 @@
+
+<form [formGroup]="profileForm">
+  <h3>Log In</h3>
+  <br>
+  <input id="email" type="email" name="email" placeholder="Email" formControlName="email" required>
+  <span *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+    <br>
+      <small style="color: red">Email is invalid. </small>
+    </span>
+  <span *ngIf="email?.errors?.email">
+      <small style="color: red">Minimum length is 8</small>
+    </span>
+  <br>
+  <br>
+  <input id="password" type="password" name="password" placeholder="Password" formControlName="password" required minlength="8">
+  <span *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+    <br>
+      <small style="color: red">Password is invalid. </small>
+    </span>
+  <span *ngIf="password?.errors?.minlength">
+      <small style="color: red">Minimum length is 8</small>
+    </span>
+  <br>
+  <br>
+  <button [disabled]="profileForm.invalid" class="btn btn-primary icon-btn" (click)="onLoginUsernamePassword()">Log In</button>
+  <br>
+  <br>
+  <div class="formGroup">
+    <button class="btn btn-primary icon-btn" type="button" (click)="onLoginGoogle()">
+      Log in with Google
+    </button>
+  </div>
+  <br>
+  <button class="btn btn-primary icon-btn" routerLink="/signup">Signup</button>
+</form>
+
+
+

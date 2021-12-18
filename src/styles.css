@@ -1,0 +1,20 @@
+.card-img-top {
+  height: 160px;
+  width: 288px;
+}
+.card {
+  transition: transform .2s;
+}
+.card:hover {
+  transform: scale(1.07);
+}
+body {
+  background-color: aliceblue;
+}
+html {
+  background-color: aliceblue;
+}
+
+hr {
+  background-color: #28adeb;
+}

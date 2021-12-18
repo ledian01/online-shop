@@ -1,0 +1,29 @@
+.icon-btn {
+  background-color: #28adeb;
+  border-radius: 20px;
+  border: none;
+  margin: 5px auto 5px 5px;
+}
+
+
+.opacity-div {
+  opacity: 0.5;
+}
+
+.red-button {
+  background-color: red;
+}
+
+.count {
+  font-size: 46%;
+  padding: 1em;
+  border-radius: 999px;
+  line-height: 0.75em;
+  color: white;
+  background: rgba(255, 0, 0, 0.85);
+  text-align: center;
+  min-width: 2em;
+  font-weight: bold;
+  height: 20px;
+  margin-left: -10px;
+}

@@ -1,0 +1,26 @@
+<div class="row mt-4">
+  <div class="col-3">
+<img src="assets/Images/Screen_Shot_2021-12-06_at_2.56.36_PM-removebg-preview.png" alt="">
+  </div>
+  <div class="col-6 offset-2" style="display: inline-flex">
+    <input type="text" class="form-control search-input" [(ngModel)]="searchText" placeholder="Search...">
+    <button (click)="searchBar()" class="btn btn-primary icon-btn" routerLink="/search">
+      <fa-icon [icon]="faSearch"></fa-icon>
+    </button>
+    <button class="btn btn-primary icon-btn" *ngIf="!(auth.user | async)" routerLink="/login">
+      Login
+    </button>
+    <button class="btn btn-primary icon-btn" (click)="authService.logout()" *ngIf="(auth.user | async)" routerLink="/login">
+      Logout
+    </button>
+    <button class="btn btn-primary icon-btn" [disabled]="!(auth.user | async)" routerLink="/favourites">
+      <fa-icon [icon]="faHeart"></fa-icon>
+    </button>
+    <span class="count" *ngIf="getWishListLength()>0">{{getWishListLength()}}</span>
+    <button class="btn btn-primary icon-btn"  [disabled]="!(auth.user | async)" routerLink="/cart">
+      <fa-icon [icon]="faShoppingCart"></fa-icon>
+    </button>
+    <span class="count" *ngIf="getCartListLength()>0">{{getCartListLength()}}</span>
+    <br>
+  </div>
+</div>

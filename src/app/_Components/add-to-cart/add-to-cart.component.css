@@ -1,0 +1,35 @@
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.btn {
+  background-color: #28adeb;
+  border: none;
+}
+
+h4 {
+  color: darkgrey;
+}
+
+h5 {
+  color: #28adeb;
+}
+
+img {
+  height: 180px;
+  width: 300px;
+}
+
+.count {
+  font-size: 70%;
+  padding: 0.8em;
+  display: inline;
+  line-height: 0.75em;
+  border-color: rgba(255, 0, 0, 1);
+  color: white;
+  background: rgba(255, 0, 0, 1);
+  text-align: center;
+  font-weight: bold;
+  height: fit-content;
+}

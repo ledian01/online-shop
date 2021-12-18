@@ -1,0 +1,22 @@
+<h3>Favourites</h3>
+<hr>
+<div *ngIf="productsArray.length==0">
+ <h4>You have no items in Favourites.</h4>
+</div>
+<div class="row">
+  <div class="col-4 mt-3" *ngFor="let Products of productsArray; let i = index">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{Products.image}}" alt="Card image cap">
+      <div class="card-body">
+        <h6 class="card-title">{{Products.name}}</h6>
+        <p>{{Products.size + ' ' + (Products.price)}}</p>
+        <p>{{Products.description}}</p>
+        <button class="btn btn-primary icon-btn red-button" aria-hidden="true" (click)="unmarkItemAsFavourite(Products.id)">
+          <fa-icon [icon]="faHeartBeat"></fa-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

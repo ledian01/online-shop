@@ -1,0 +1,33 @@
+<form [formGroup]="createForm">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name">
+    <br>
+    <br>
+    <p>Category:
+    <select formControlName="category">
+      <option value="pc">Pc</option>
+      <option value="laptop">Laptop</option>
+      <option value="accessor">Accessor</option>
+    </select>
+    </p>
+    <br>
+    <label for="price">Price:</label>
+    <input type="text" id="price" formControlName="price">
+    <br>
+    <br>
+    <label for="size">Size:</label>
+    <input type="text" id="size" formControlName="size">
+    <br>
+    <br>
+    <label for="description">Description:</label>
+    <input type="text" id="description" formControlName="description">
+    <br>
+    <br>
+    <label for="size">Image:</label>
+    <input type="text" id="image" formControlName="image">
+    <br>
+    <br>
+    <button class="btn btn-primary icon-btn" (click)="create()">Add Product</button>
+  </div>
+</form>

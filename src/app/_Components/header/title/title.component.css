@@ -1,0 +1,41 @@
+.search-input {
+  margin-right: 10px;
+  border-radius: 30px;
+}
+
+.icon-btn {
+  border-radius: 20px;
+  margin: auto 5px auto;
+  background-color: #28adeb;
+  border: none;
+}
+
+h3 {
+  color: #28adeb;
+  font-family: Charter;
+  font-weight: bold;
+}
+
+.count {
+  font-size: 56%;
+  padding: 0.8em;
+  display: inline;
+  margin-left: -15px;
+  border-radius: 999px;
+  line-height: 0.75em;
+  margin-top: 25px;
+
+  color: white;
+  background: rgba(255, 0, 0, 1);
+  text-align: center;
+  font-weight: bold;
+  height: fit-content;
+}
+
+img {
+  height: 100px;
+  width: 250px;
+}
+.form-control {
+  margin: auto;
+}

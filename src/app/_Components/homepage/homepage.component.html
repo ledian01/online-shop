@@ -1,0 +1,29 @@
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="assets/Images/image2.jpeg" alt="Random first slide" routerLink="/products/laptop">
+    </div>
+    <div class="carousel-caption">
+      <h3>Welcome!</h3>
+      <p>Best offers.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="assets/Images/image1.jpeg" alt="Random second slide" routerLink="/products/pc">
+    </div>
+    <div class="carousel-caption">
+      <h3>Welcome!</h3>
+      <p>Best offers.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="assets/Images/image3.jpeg" alt="Random third slide" routerLink="/products/accessor">
+    </div>
+    <div class="carousel-caption">
+      <h3>Welcome!</h3>
+      <p>Best offers.</p>
+    </div>
+  </ng-template>
+</ngb-carousel>

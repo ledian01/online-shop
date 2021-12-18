@@ -1,0 +1,80 @@
+<div class="admin-table">
+  <h3>Admin</h3>
+  <hr>
+  <button class="btn btn-primary btn-lg btn-block" type="button" routerLink="/add-product">+Add new product</button>
+  <br>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Category</th>
+      <th scope="col">Price</th>
+      <th scope="col">Size</th>
+      <th scope="col">Description</th>
+      <th scope="col">Image</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let Products of productsArray">
+      <th scope="row">{{ Products.id }}</th>
+      <td>{{ Products.name }}</td>
+      <td>{{ Products.category }}</td>
+      <td>{{ Products.price}}</td>
+      <td>{{ Products.size}}</td>
+      <td>{{ Products.description}}</td>
+      <td>{{ Products.image}}</td>
+      <td>
+        <ng-template #content let-modal>
+          <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Product update</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="formGroup">
+              <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" value="{{Products.name}}" formControlName="name">
+                  <br>
+                  <br>
+                <p>Category:</p>
+                <select [value]="Products.category" formControlName="category">
+                  <option value="pc">Pc</option>
+                  <option value="laptop">Laptop</option>
+                  <option value="accessor">Accessor</option>
+                </select>
+                <br>
+                <br>
+                <label for="price">Price:</label>
+                <input type="text" id="price" value="{{Products.price}}" formControlName="price" >
+                <br>
+                <br>
+                <label for="size">Size:</label>
+                <input type="text" id="size" value="{{Products.size}}" formControlName="size">
+                <br>
+                <br>
+                <label for="description">Description:</label>
+                <input type="text" id="description" value="{{Products.description}}" formControlName="description">
+                <br>
+                <br>
+                <label for="size">Image:</label>
+                <input type="text" id="image" value="{{Products.image}}" formControlName="image" >
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click');update(Products.id)">Save</button>
+          </div>
+        </ng-template>
+        <button class="btn btn-primary" (click)="open(content, Products.id)" >Edit</button>
+      </td>
+      <td>
+        <button id="red-button" class="btn btn-primary" (click)="delete(Products.id)">Remove</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

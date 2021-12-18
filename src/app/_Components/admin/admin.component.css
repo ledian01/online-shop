@@ -1,0 +1,17 @@
+#red-button {
+  background-color: red;
+  border: none;
+}
+
+#green-button {
+  background-color: #28adeb;
+  border: none;
+}
+
+.btn-lg {
+  background-color: #00bf13;
+  border: none;
+}
+
+.admin-table {
+}

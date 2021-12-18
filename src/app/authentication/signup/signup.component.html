@@ -1,0 +1,34 @@
+
+<form [formGroup]="profileForm">
+  <h3>Sign up</h3>
+  <br>
+  <input id="email" type="email" name="email" placeholder="Email" formControlName="email" required>
+  <span *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+    <br>
+      <small style="color: red">Email is invalid. </small>
+    </span>
+  <span *ngIf="email?.errors?.email">
+      <small style="color: red">Minimum length is 8</small>
+    </span>
+  <br>
+  <br>
+  <input id="password" type="password" name="password" placeholder="Password" formControlName="password" required minlength="8">
+  <span *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+    <br>
+      <small style="color: red">Password is invalid. </small>
+    </span>
+  <span *ngIf="password?.errors?.minlength">
+      <small style="color: red">Minimum length is 8</small>
+    </span>
+  <br>
+  <br>
+  <input id="repeatPassword" type="password" name="password" placeholder="Repeat password" formControlName="repeatPassword" required minlength="8">
+  <span *ngIf="repeatPassword?.invalid && (repeatPassword?.dirty || repeatPassword?.touched)">
+    <br>
+      <small style="color: red">Password is invalid. </small>
+  </span>
+    <br>
+    <br>
+  <button [disabled]="profileForm.invalid" class="btn btn-primary icon-btn" (click)="onClick()">Signup</button>
+
+</form>

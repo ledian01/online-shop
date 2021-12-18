@@ -1,0 +1,14 @@
+.icon-btn {
+  background-color: #28adeb;
+  border-radius: 20px;
+  border: none;
+  margin: 5px auto 5px 5px;
+}
+
+.red-button {
+  background-color: red;
+}
+
+h4 {
+  color: darkgrey;
+}

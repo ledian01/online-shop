@@ -1,0 +1,15 @@
+.selected-item {
+  background-color: #28adeb;
+}
+
+#btn {
+margin-left : 5px;
+}
+
+.btn {
+  background-color: #28adeb;
+  border-color: #28adeb;
+}
+#navbarNav {
+  background-color: aliceblue;
+}
